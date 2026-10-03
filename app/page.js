@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Counter from "./components/Counter";
+import ServerMessage from "./components/ServerMessage";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
 
       <Link href="/about">Go to About</Link>
       <Counter />
+      <ServerMessage />
     </div>
   );
 }
