@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 8. What I Learned
 
-## Getting Started
+### 1. What does Next.js provide beyond React alone?
 
-First, run the development server:
+Next.js provides features such as routing, server-side code, API endpoints, and Server Components on top of React. This means we can build both the frontend and backend parts of an application in the same project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 2. Why does the counter need use client?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The counter needs use client because it uses useState and an onClick event. These features need to run in the user's browser. Basically if it's a component it has to have it in the beginning of the file.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Where does the code in app/api/message/route.js run?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The code in app/api/message/route.js runs on the server. The browser sends a request to the endpoint and the server sends the response back.
 
-## Learn More
+### 4. How is this endpoint similar to an Express route?
 
-To learn more about Next.js, take a look at the following resources:
+It is similar to an Express route because it handles an HTTP request and returns a response.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Why must secrets remain on the server?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Secrets such as API keys and database credentials must remain on the server because browser code can be inspected by users. If a secret is included in client-side code, users could potentially access it. Kind of like keeping more secretive things in the backend rather than frontend?
